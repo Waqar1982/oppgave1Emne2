@@ -14,7 +14,7 @@ app:{
 
 },
 
-input:{
+inputs:{
     addActivity: {
         
             id: null,
