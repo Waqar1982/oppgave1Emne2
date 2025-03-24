@@ -1,18 +1,10 @@
 const model = {
 
 app:{
-    page: [
-        'startPage',
-        'dashbord',
-        'koffeinkalkulator',
-        'logg',
-        'timer',
-        ],
+    page: ['startPage','dashbord','logg', 'koffeinkalkulator', 'timer'],
+    },
 
-
-},
-
-inputs:{
+inputs: {
     editItem:{
         name:'',
         price: null,
@@ -23,7 +15,7 @@ inputs:{
 
     oppdaterLogg: {
         dato: null,
-        koffein
+        koffein: null,
     },
 
     loggInn: {
@@ -31,11 +23,25 @@ inputs:{
         password: '',
     },
 
-createUser:{
-    name: '',
+    createUser:{
+        name: '',
+        password: '',
+        id: null,
+    },  
+
+    timer: {
+        start: '',
+        resett: '',
         
-    
-},  
+
+    },
+
+    counter: {
+        date: '',
+        hours: '',
+        min: '',
+        sec: '',
+    },
 
 },
 
@@ -57,11 +63,21 @@ data: {
         {id: 3, gruppeNavn: 'Annet', beskrivelse: '???'}
     ],
         
-    koffeinLogg: [],
+    koffeinLogger: [
+        {userId: 1,
+        datoer: [{dag: 1, koffein: null, dato:'', uke: 1},],
+        },
+    ],
 
-    motivasjonsBoost: ['Eksempel: Et kaldt glass vann er bra!'],
+    motivasjonsBoost: ['Eksempel: Et kaldt glass vann er bra!', ''],
         
     category: [],
+
+
+    users: [
+        {id: 1, name: '', password: ''},
+
+    ],
         
         
         
