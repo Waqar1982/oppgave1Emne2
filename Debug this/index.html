@@ -18,12 +18,11 @@
                 a: "Rød kjempekenguru",
                 b: "Blåhval",
                 c: "Elefant",
-
-
+            },
             correctAnswer: "Elefant"
             },
 
-        },
+        
         {
             question: "Hva er HEX koden for hvit?",
             answers: {
@@ -54,11 +53,11 @@
     function showQuiz(){
         let randomQuestionIndex = Math.floor(Math.random()*questionArray.length ) //l
       
-        outputDiv.innerHTML += ' Number of Correct Answers: ${correctAnswerCounter}
-        ${questionArray[randomQuestionIndex].question} </br>'
+        outputDiv.innerHTML += `Number of Correct Answers: ${correctAnswerCounter}
+        ${questionArray[randomQuestionIndex].question} </br>
         `;
-        for(answer in questionArray[randomQuestionIndex]){
-            outputDiv.innerHTML += `
+        for(let answer in questionArray[randomQuestionIndex].answers){
+            outputDiv.innertext += `              
             <li onclick="checkAnswer(this.innerHTML, ${randomQuestionIndex})">
             ${questionArray[randomQuestionIndex][answer]} 
             </li>`;
