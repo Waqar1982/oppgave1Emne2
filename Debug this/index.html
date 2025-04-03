@@ -37,7 +37,7 @@
             question: "Hva er tyngst av en kilo mel, en kilo bly og en kilo fjær?",
             answers: {
                 a: "BLY.",
-                b: "Fjær, det er det flere av i en kilo", // b imstedenfor
+                b: "Fjær, det er det flere av i en kilo", // b istedenfor d
                 c: "Lurespørsmål!"
             },
             correctAnswer: "Lurespørsmål!"
@@ -51,16 +51,19 @@
 
     showQuiz();
     function showQuiz(){
-        let randomQuestionIndex = Math.floor(Math.random()*questionArray.length ) //l
+        let randomQuestionIndex = Math.floor(Math.random()*questionArray.length ) //l istedenfor i
       
         outputDiv.innerHTML += `Number of Correct Answers: ${correctAnswerCounter}
         ${questionArray[randomQuestionIndex].question} </br>
-        `;
+        `
+        ;
         for(let answer in questionArray[randomQuestionIndex].answers){
             outputDiv.innertext += `              
             <li onclick="checkAnswer(this.innerHTML, ${randomQuestionIndex})">
             ${questionArray[randomQuestionIndex][answer]} 
-            </li>`;
+            </li>
+            `
+            ;
         }
 
         showQuiz();
