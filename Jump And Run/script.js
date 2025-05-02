@@ -20,7 +20,7 @@ function draw () {
    rect(platform.x, platform.y,150, 20);
    
 
-    player.y += jumpForce;
+    player.y += jumpForce;4
     player.x += movement;
 
     if (player.y >= ground){
